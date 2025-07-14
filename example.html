@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Page</title>
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&display=swap">
+</head>
+<body>
+    <div class="header">
+        <a href="home.html">
+             <img src="https://www.clipartmax.com/png/full/148-1482058_walmart-logo-walmart-logo-no-background.png" alt="Logo" >
+        </a>
+       
+        BILL
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                <ul>
+                    <a href="home.html">
+                        <li><i class="fas fa-home"></i>Home
+                    </a>
+                    <a href="index.html">
+                        <li><i class="fas fa-box"></i>Products
+                    </a>
+                    <a href="Login.html">
+                        <li><i class="fas fa-sign-out-alt"></i>Logout
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            
+    <div class="bill">
+        <h2 style="text-align:center;">Customer Bill</h2>
+        <div id="bill-items" style="margin-bottom: 20px;"></div>
+        <hr>
+        <p>Total: <span id="bill-total"></span></p>
+        <div id="barcode" style="margin-top: 30px; text-align: center;"></div>
+    
+            </div>
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const billItemsContainer = document.getElementById("bill-items");
+    const billTotal = document.getElementById("bill-total");
+    const barcodeContainer = document.getElementById("barcode");
+
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    let total = 0;
+
+    cartData.forEach(item => {
+        const itemDiv = document.createElement("div");
+        itemDiv.style.marginBottom = "10px";
+        itemDiv.innerHTML = `
+            <strong>${item.productTitle}</strong><br>
+            Location: ${item.productLocation}<br>
+            Price: ${item.productPrice}<br>
+            Quantity: ${item.quantity}<br>
+            Subtotal: $${(parseFloat(item.productPrice.replace('$','')) * item.quantity).toFixed(2)}
+        `;
+        billItemsContainer.appendChild(itemDiv);
+        total += parseFloat(item.productPrice.replace('$', '')) * item.quantity;
+    });
+
+    billTotal.textContent = `$${total.toFixed(2)}`;
+    const canvas = document.createElement('canvas');
+    canvas.width = 300;
+    canvas.height = 100;
+    const ctx = canvas.getContext("2d");
+    ctx.font = "40px monospace";
+    const barcodeString = "BR" + Math.floor(Math.random() * 1000000000);
+    ctx.fillText(barcodeString, 10, 60);
+    barcodeContainer.appendChild(canvas);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    const shelfMap = {
+        1: "a",
+        2: "b",
+        3: "c",
+        4: "d",
+        5: "e",
+        6: "f",
+        7: "g",
+        8: "h",
+        9: "i"
+    };
+
+    const shelvesToHighlight = new Set();
+    cartData.forEach(item => {
+        const location = item.productLocation;
+        const shelfMatch = location.match(/Shelf\s*(\d+)/i);
+        if (shelfMatch) {
+            const shelfNumber = parseInt(shelfMatch[1]);
+            shelvesToHighlight.add(shelfNumber);
+        }
+    });
+
+    shelvesToHighlight.forEach(shelfNumber => {
+        const shelfClass = shelfMap[shelfNumber];
+        if (shelfClass) {
+            const shelfElement = document.querySelector(`.shelf.${shelfClass}`);
+            if (shelfElement) {
+                shelfElement.style.backgroundColor = "yellow";
+                shelfElement.style.color = "black"; 
+                shelfElement.style.fontWeight = "bold";
+            }
+        }
+    });
+});
+</script>
+
+<div class="map">
+<div class="entrance">enterance</div>
+<div class="supermarket">
+<div class="counter">counter</div>
+<div class="shelf a">Shelf 1</div>
+<div class="shelf b">Shelf 2</div>
+<div class="shelf c">Shelf 3</div>
+<div class="shelf d">Shelf 4</div>
+<div class="shelf e">Shelf 5</div>
+<div class="shelf f">Shelf 6</div>
+<div class="shelf g">Shelf 7</div>
+<div class="shelf h">Shelf 8</div>
+<div class="shelf i">Shelf 9</div>
+
+</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>

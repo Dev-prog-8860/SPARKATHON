@@ -1,0 +1,187 @@
+*{
+    text-decoration: none;
+}
+
+h1{
+    position: relative;
+    top: 8%;
+    align-items: center;
+    margin-left: 37%;
+    font-size: xx-large;
+    font-family: Itim;
+}   
+
+
+body{
+    background-color: #0053E2;
+}
+
+h2{
+    background-color: #0053E2;
+}
+
+.Username{
+    position: relative;
+    top: 8%;
+    left: 15%;
+    height: 30px;
+    width: 7cm;
+    background-color: #fafafa;  
+    box-shadow: 0 7px 7px rgba(0, 0, 7, 0.362);
+    border-radius: 9px;
+    border-color: black;
+}
+
+.Password{
+    position: relative;
+    top: 5%;
+    left: 15%;
+    height: 30px;
+    width: 7cm;
+    background-color: #fafafa;
+    box-shadow: 0 7px 7px rgba(0, 0, 7, 0.362);
+    border-radius: 9px;
+    border-color: black;
+
+}
+
+
+button{
+    font-family: Itim;
+    color: #fafafa;
+    font: bold;
+    text-emphasis-color: #fafafa;
+    position: relative;
+    top: 5%;
+    height: 40px;
+    width: 325px;
+    margin-left: 7%;
+    background-color: #0AABFC;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 7px 7px rgba(0, 0, 7, 0.362);
+}
+
+h3{
+    position: relative;
+    font-family: Itim;
+    top: 10%;
+    left: 15%;
+
+}
+h4{
+    position: relative;
+    font-family: Itim;
+    top: 13%;
+    left: 15%;
+
+}
+
+.rounded-square{
+    position: relative;
+    top: 120px;
+    left: 37%;
+    border-radius: 65px;
+    width: 10cm;
+    height: 10cm;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    box-shadow: 0 7px 20px rgb(1, 72, 253);
+    
+}
+
+.rounded-square:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow: 0 7px 20px rgb(0, 0, 14);
+    
+}
+
+.background
+{
+    position: fixed;
+    width: 1600px;
+    height: 721px;
+    left: 0%;
+    top: 0%;
+}
+
+.ri-home-4-fill{
+    background-color: black;
+    bottom: 0%;
+    margin-left: 1%;
+    height: 5cm;
+    width: 5cm;
+}
+
+.Welcome{
+    position: fixed;
+    font-family: itim;
+    font-style: italic;
+    margin-right: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #fafafa;
+    box-shadow: 0 7px 20px rgb(1, 72, 253);
+}
+
+.Topmart{
+    font-style: italic;
+    font-family: calibri;
+    padding-right: 15px;
+    padding-right: 15px;
+    position: fixed;
+    top: 0;
+    background-color: #0AABFC;
+    height: 70px;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 7px 20px rgb(2, 100, 206);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo{
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+li{
+    list-style: none;
+    margin-right: 40px;
+    display: inline-block;
+}
+
+li a{     
+    margin-top: 10%;
+    margin-right: 25px;
+    color: #fafafa;
+    font-weight: 900;
+    border-radius: 10px;
+    height: 20px;
+    width: 30px;
+    transition: all 0.3s ease;
+}
+
+li a:hover{
+    background-color: antiquewhite;
+    color: #0AABFC;
+    transform: translateY(-10px);
+    box-shadow: #0053E2;
+
+}
+.Welcome p{
+    text-align: center;
+}
+
+body nav{
+    text-decoration: none;
+}
+
