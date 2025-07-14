@@ -1,51 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="home.css" />
-    <script src="home.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparkathon</title>
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+    <link rel="stylesheet" href="style.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-
-
+    rel="stylesheet"/>
 </head>
-
 <body>
-    
-    <nav>
-
-        <a href="# ">
-            <img src="https://www.clipartmax.com/png/full/148-1482058_walmart-logo-walmart-logo-no-background.png"  class="logo1">
+    <h1>
+        <a href="home.html" class="logo">
+            <img src="https://www.clipartmax.com/png/full/148-1482058_walmart-logo-walmart-logo-no-background.png" alt="Website Logo" style="height: 50px; width: auto;" />
         </a>
-        
-        <a href="index.html">
-            <div id="cart-icon" >
-            <ion-icon name="cart-outline" style="color: white;"></ion-icon>
+        <!-- <div id="cart-icon">
+            <i class="ri-shopping-cart-line"></i>
             <span class="cart-item-count"></span>
-        </div>
-
-        </a>
-
-        
+        </div> -->
     </h1>
 
-    <div class="cart">
+<div class="cart">
         <h2 class="cart-title">Your Cart</h2>
         <div class="cart-content">
             <div class="cartbox">
                 <img src="images/4 piece serving bowl.png" class="cart-img">
                 <div class="cart-details">
                     <h2 class="cart-product-title">4 piece serving bowl</h2>
-                    <h3 class="product-location">Aisle 4, Shelf 3</h3>
+                    <h3 class="cart-location">Aisle 4, Shelf 3</h3>
                     <span class="cart-price">$12.95</span>
                     <div class="cart-quantity">
                         <button id="decrement">-</button>
@@ -62,138 +44,10 @@
         </div>
         <button class="btn-buy" onclick="window.location.href='example.html'">Generate BarCode</button>
         <i class="ri-close-line" id="cart-close"></i>
-    </div>
+</div>
 
-
-        
-    
-        
-        
-        <a href="Login.html" class ="login">
-            <ion-icon name="person-circle-outline" style="color: white;"></ion-icon>
-        </a>
-        
-    </nav>
-
-    
-    
-
-    <div class="container">
-        <form action="#" method="get" class="search-bar" id="product-search-form">
-            <input type="text" placeholder = "search anything" name="q" id="search-input">
-            <button type = "submit">
-                <ion-icon name="search-outline" class="sear"></ion-icon></ion-icon>
-            </button>
-        </form>
-
-    </div>
-
-
-  
-
-
-    <!--<div class="tiles">
-                <div class="t1">
-                    <img src="1.png">
-                </div>
-
-                <div class="t2">
-                    <img src="2.png">
-                </div>
-
-                <div class="t3">
-                    <img src="3.png">
-                </div>
-
-                <div class="t4">
-                    <img src="4.png">
-                </div>
-
-                <div class="t5">
-                    <img src="5.png">
-                </div>
-
-
-    </div>-->
-
-
-
-
-
-
-    <section class="shop">
-        <div class="product-tile">
-        <div class="product-content">
-            <div class="product-box">
-                <div class="img-box">
-                    <img src="images/4 piece serving bowl.png">
-                </div>
-                <h2 class="product-title">4 piece serving bowl</h2>
-                <h3 class="product-location">Aisle 4, Shelf 1</h3>
-                <div class="price-and-cart">
-                    <span class="price">$12.95</span>
-                    <i class="ri-shopping-cart-line add-cart"></i>
-                </div>
-            </div>
-
-
-            <div class="product-box">
-                <div class="img-box">
-                    <img src="images/Air fry toaster.png">
-                </div>
-                <h2 class="product-title">Air fry toaster</h2>
-                <h3 class="product-location">Aisle 4, Shelf 3</h3>
-                <div class="price-and-cart">
-                    <span class="price">$99.99</span>
-                    <i class="ri-shopping-cart-line add-cart"></i>
-                </div>
-            </div>
-
-            <div class="product-box">
-                <div class="img-box">
-                    <img src="images/Ceramic Vase.png">
-                    
-                </div>
-                <h2 class="product-title">Ceramic Vase</h2>
-                <h3 class="product-location">Aisle 3, Shelf 4</h3>
-                <div class="price-and-cart">
-                    <span class="price">$22.49</span>
-                    <i class="ri-shopping-cart-line add-cart"></i>
-                </div>
-            </div>
-
-            <div class="product-box">
-                <div class="img-box">
-                    <img src="images/9.png">
-                </div>
-                <h2 class="product-title">Bing Beverage</h2>
-                <h3 class="product-location">Aisle 1, Shelf 6</h3>
-                <div class="price-and-cart">
-                    <span class="price">$41.55</span>
-                    <i class="ri-shopping-cart-line add-cart"></i>
-                </div>
-            </div>
-
-            <div class="product-box">
-                <div class="img-box">
-                    <img src="images/White ceramic bowl.png">
-                </div>
-                <h2 class="product-title">White Ceramic Bowl</h2>
-                <h3 class="product-location">Aisle 4, Shelf 8</h3>
-                <div class="price-and-cart">
-                    <span class="price">$100.40</span>
-                    <i class="ri-shopping-cart-line add-cart"></i>
-                </div>
-            </div>
-
-        </div>
-            
+    <script src="app.js"></script>  
             
 
         </div>
     </section>
-
-
-</body>
-
-</html>
