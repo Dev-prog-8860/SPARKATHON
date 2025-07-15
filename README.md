@@ -85,7 +85,7 @@ https://youtu.be/JZ_R0KD_er8
 Maintainer: [Dev-prog-8860](https://github.com/Dev-prog-8860)
             [AVINASH-V-BHASKARAN](https://github.com/AVINASH-V-BHASKARAN)
             [Arju625](https://github.com/Arju625)
-            [Muhammed Suhail]
+            [Muhammed-Suhail77](https://github.com/Muhammed-Suhail77)
 
 For questions or feedback, please open an issue or contact the maintainer.
 
