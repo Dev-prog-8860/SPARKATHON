@@ -25,6 +25,7 @@ h2{
     top: 8%;
     left: 15%;
     height: 30px;
+    margin-top: 50px;
     width: 7cm;
     background-color: #fafafa;  
     box-shadow: 0 7px 7px rgba(0, 0, 7, 0.362);
@@ -36,6 +37,7 @@ h2{
     position: relative;
     top: 5%;
     left: 15%;
+    margin-top: 20px;
     height: 30px;
     width: 7cm;
     background-color: #fafafa;
@@ -56,6 +58,7 @@ button{
     height: 40px;
     width: 325px;
     margin-left: 7%;
+    margin-right: 7%;
     background-color: #0AABFC;
     border-radius: 10px;
     transition: all 0.3s ease;

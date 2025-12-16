@@ -23,15 +23,21 @@
             </div>
         </nav>
         <div class="rounded-square">
-        <h1> Sign In </h1>
-        <h4>Phone no or Email</h4>
-        <input type="text" class="Username" placeholder="Enter your Phone number or Email">
-        <br>
-        <h3>Password</h3>
-        <input type="password" class="Password" placeholder="Enter your Password">
-        <br><br><br>
-        <button onclick="window.location.href='index.html'">Continue</button>
-         
+            <h1>Sign In</h1>
+            <form id="auth-form" novalidate>
+                <label for="identifier"></label>
+                <input id="identifier" name="identifier" type="text" class="Username" placeholder="Enter your phone number or email" required>
+
+                <label for="password"></label>
+                <input id="password" name="password" type="password" class="Password" placeholder="Enter your password" required>
+
+                <div style="margin-top:18px; display:flex; gap:12px;">
+                    <button id="signin-btn" type="submit">Sign in</button>
+                    <button id="signup-btn" type="button">Create account</button>
+                </div>
+
+                <div id="auth-message" role="status" aria-live="polite" style="margin-top:12px;color:#900"></div>
+            </form>
         </div>
 
         <div class="Welcome">
@@ -46,8 +52,9 @@
     </section>
 
     </div>
-   
-    
-
 </body>
 </html> 
+
+    <script defer src="Login.js"></script>
+</body>
+</html>
